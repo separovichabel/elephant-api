@@ -44,6 +44,13 @@ func (m *UserDAO) GetByID(id string) (User, error) {
 	return user, err
 }
 
+// GetByEmail to verify existence
+func (m *UserDAO) GetByEmail(email string) (User, error) {
+	var user User
+	err := db.C(COLLECTION).Find(bson.M{"email": email}).One(&user)
+	return user, err
+}
+
 // Create to Create
 func (m *UserDAO) Create(user User) error {
 	err := db.C(COLLECTION).Insert(&user)
