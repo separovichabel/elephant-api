@@ -5,12 +5,12 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	. "github.com/separovichabel/monkey-api/db/dao"
-	. "github.com/separovichabel/monkey-api/models/user"
+	. "github.com/separovichabel/elephant-api/db"
+	. "github.com/separovichabel/elephant-api/models/user"
 	"gopkg.in/mgo.v2/bson"
 )
 
-var dao = UsersDAO{}
+var dao = UserDAO{}
 
 func respondWithError(w http.ResponseWriter, code int, msg string) {
 	respondWithJson(w, code, map[string]string{"error": msg})

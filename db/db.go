@@ -1,9 +1,9 @@
-package dao
+package db
 
 import (
 	"log"
 
-	. "github.com/separovichabel/monkey-api/models/user"
+	. "github.com/separovichabel/elephant-api/models/user"
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )

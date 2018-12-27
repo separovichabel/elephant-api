@@ -6,9 +6,9 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	. "github.com/separovichabel/monkey-api/config"
-	. "github.com/separovichabel/monkey-api/db/dao"
-	userRoutes "github.com/separovichabel/monkey-api/routes"
+	. "github.com/separovichabel/elephant-api/config"
+	. "github.com/separovichabel/elephant-api/db"
+	userRoutes "github.com/separovichabel/elephant-api/routes"
 )
 
 var dao = UserDAO{}
